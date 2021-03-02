@@ -15,7 +15,7 @@ const queue = new Map();
 const { YTSearcher } = require('ytsearcher');
 
 const searcher = new YTSearcher({
-    key : "AIzaSyBsn6qJl6v6APN88y-FxScXMCFVPDgH0j0",
+    key : process.env.youtube_api,
     revealed: true
 });
 
@@ -163,4 +163,4 @@ client.on('message', async(message) => {
 
 
 
-client.login('ODE1NTkyMTU0MDgzNzU0MDA0.YDupYg.NeCT_idEa14Ow4Zwyx0uB5wns3c');
+client.login(process.env.token);
